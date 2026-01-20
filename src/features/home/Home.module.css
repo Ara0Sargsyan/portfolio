@@ -1,0 +1,89 @@
+.hero {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.heroBadge {
+  margin-bottom: 1.5rem;
+}
+
+.badge {
+  display: inline-block;
+  background: var(--color-primary-100);
+  color: var(--color-primary-700);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.025em;
+}
+
+.gradientText {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  color: var(--color-text-secondary);
+  max-width: 36rem;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.skillCard {
+  text-align: center;
+  padding: 2rem;
+}
+
+.skillIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.skillCard h3 {
+  margin-bottom: 0.75rem;
+  color: var(--color-text-primary);
+}
+
+.skillCard p {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.125rem;
+  }
+  
+  .skillsGrid {
+    grid-template-columns: 1fr;
+  }
+}
