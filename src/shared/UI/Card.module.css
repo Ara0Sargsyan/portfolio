@@ -13,14 +13,3 @@
   box-shadow: var(--color-shadow-lg);
   border-color: var(--color-primary-300);
 }
-
-/* Card variants */
-.card.primary {
-  background: linear-gradient(135deg, 
-    var(--color-primary-50) 0%, 
-    var(--color-bg-card) 100%);
-}
-
-.card.accent {
-  border-top: 4px solid var(--color-accent-teal);
-}

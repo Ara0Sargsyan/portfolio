@@ -1,19 +1,19 @@
 /* src/index.css - UPDATED COLOR PALETTE */
 
 :root {
-  /* 🌟 Primary Colors - Soft & Professional */
-  --color-primary-50: #f0f9ff;
-  --color-primary-100: #e0f2fe;
-  --color-primary-200: #bae6fd;
-  --color-primary-300: #7dd3fc;
-  --color-primary-400: #38bdf8;
-  --color-primary-500: #0ea5e9;
-  --color-primary-600: #0284c7;
-  --color-primary-700: #0369a1;
-  --color-primary-800: #075985;
-  --color-primary-900: #0c4a6e;
-  
-  /* 🎨 Neutral Colors - Clean & Elegant */
+  /* 🌿 Primary Green Palette */
+  --color-primary-50:  #ecfdf5;
+  --color-primary-100: #d1fae5;
+  --color-primary-200: #a7f3d0;
+  --color-primary-300: #6ee7b7;
+  --color-primary-400: #34d399;
+  --color-primary-500: #10b981;
+  --color-primary-600: #059669;
+  --color-primary-700: #047857;
+  --color-primary-800: #065f46;
+  --color-primary-900: #064e3b;
+
+  /* 🎨 Neutral (մնա նույնը, ճիշտ է արդեն) */
   --color-neutral-50: #f8fafc;
   --color-neutral-100: #f1f5f9;
   --color-neutral-200: #e2e8f0;
@@ -24,35 +24,29 @@
   --color-neutral-700: #334155;
   --color-neutral-800: #1e293b;
   --color-neutral-900: #0f172a;
-  
-  /* 🌈 Accent Colors */
-  --color-accent-teal: #14b8a6;
-  --color-accent-purple: #8b5cf6;
-  --color-accent-pink: #ec4899;
-  --color-accent-amber: #f59e0b;
-  
-  /* 🏢 Light Theme - Professional Portfolio */
-  --color-bg-primary: #ffffff;
-  --color-bg-secondary: #f8fafc;
+
+  /* 🌱 Accent Colors (minimal & elegant) */
+  --color-accent-main: #10b981;
+  --color-accent-soft: #6ee7b7;
+  --color-accent-dark: #047857;
+
+  /* 🏢 Light Theme */
+  --color-bg-primary: #e3eed4;
+  --color-bg-secondary: #edf7f2;
   --color-bg-card: #ffffff;
-  --color-bg-subtle: #f1f5f9;
-  
-  --color-text-primary: #1e293b;
-  --color-text-secondary: #64748b;
-  --color-text-tertiary: #94a3b8;
-  
-  --color-border-light: #e2e8f0;
-  --color-border: #cbd5e1;
-  
-  --color-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
-  --color-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
-  --color-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  --color-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-  
-  /* 🌌 Gradient Backgrounds */
-  --gradient-primary: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-  --gradient-subtle: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-  --gradient-accent: linear-gradient(135deg, #0ea5e9 0%, #8b5cf6 100%);
+  --color-bg-subtle: #e6f4ec;
+
+  --color-text-primary: #0f2f25;
+  --color-text-secondary: #3f5f55;
+  --color-text-tertiary: #7aa39a;
+
+  --color-border-light: #d1e7dd;
+  --color-border: #b6d9cc;
+
+  /* 🌌 Gradients */
+  --gradient-primary: linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%);
+  --gradient-subtle: linear-gradient(180deg, #f6fbf8 0%, #edf7f2 100%);
+  --gradient-accent: linear-gradient(135deg, #10b981 0%, #047857 100%);
   
   /* ✨ Glassmorphism */
   --glass-bg: rgba(255, 255, 255, 0.8);
@@ -74,28 +68,23 @@
 
 /* 🌙 Dark Theme */
 [data-theme="dark"] {
-  --color-bg-primary: #0f172a;
-  --color-bg-secondary: #1e293b;
-  --color-bg-card: #1e293b;
-  --color-bg-subtle: #334155;
-  
-  --color-text-primary: #f1f5f9;
-  --color-text-secondary: #cbd5e1;
-  --color-text-tertiary: #94a3b8;
-  
-  --color-border-light: #334155;
-  --color-border: #475569;
-  
-  --color-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
-  --color-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
-  --color-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
-  
-  --gradient-primary: linear-gradient(135deg, #0c4a6e 0%, #1e293b 100%);
-  --gradient-subtle: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-  
-  --glass-bg: rgba(30, 41, 59, 0.8);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --color-bg-primary: #051f20;
+  --color-bg-secondary: #0b2b26;
+  --color-bg-card: #0e3b32;
+  --color-bg-subtle: #163832;
+
+  --color-text-primary: #daf1e6;
+  --color-text-secondary: #a8d5c2;
+  --color-text-tertiary: #7fb8a4;
+
+  --color-border-light: #1f4f45;
+  --color-border: #2f6f62;
+
+  --gradient-primary: linear-gradient(135deg, #051f20 0%, #0b2b26 100%);
+  --gradient-subtle: linear-gradient(180deg, #0b2b26 0%, #051f20 100%);
+
+  --glass-bg: rgba(15, 59, 50, 0.75);
+  --glass-border: rgba(218, 241, 230, 0.08);
 }
 
 

@@ -31,6 +31,7 @@
   justify-content: center;
   font-size: 11px;
   box-shadow: var(--color-shadow-sm);
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .toggleTrack.dark .toggleThumb {
