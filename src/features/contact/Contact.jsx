@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styles from './Contact.module.css';
 import { FaGithub, FaLinkedinIn, FaPhoneAlt, FaRegEnvelope, FaCheck } from "react-icons/fa";
+import Card from '../../shared/ui/Card';
 import Container from '../../shared/ui/Container';
 
 const contactData = [
@@ -60,7 +61,7 @@ const Contacts = () => {
         {contactData.map((item) => {
           const isCopy = item.type === 'copy';
           const Content = (
-            <div hover={true} className={`${styles.contactCard} ${isCopy ? styles.copyCard : ''}`}>
+            <Card hover={true} className={`${styles.contactCard} ${isCopy ? styles.copyCard : ''}`}>
               <div className={styles.iconBox}>
                 {copiedId === item.id ? <FaCheck className={styles.checkIcon} /> : item.icon}
               </div>
@@ -70,7 +71,7 @@ const Contacts = () => {
                   {copiedId === item.id ? 'Copied!' : item.value}
                 </span>
               </div>
-            </div>
+            </Card>
           );
 
           return isCopy ? (
