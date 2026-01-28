@@ -1,0 +1,45 @@
+.footer {
+  background: var(--color-bg-secondary);
+  border-top: 1px solid var(--color-border-light);
+  padding: 40px 20px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.logo {
+  color: var(--color-primary-300);
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.socials {
+  display: flex;
+  gap: 15px;
+  font-size: 1.2rem;
+}
+
+.socials a {
+  color: var(--color-text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.socials a:hover {
+  color: var(--color-primary-200);
+}
+
+.bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid var(--glass-border);
+  font-size: 0.9rem;
+  color: var(--color-text-tertiary);
+}
