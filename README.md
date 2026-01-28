@@ -1,16 +1,53 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img width="1894" height="960" alt="image" src="https://github.com/user-attachments/assets/21927e33-52d1-497e-a965-c2fbe372da86" />
 
-Currently, two official plugins are available:
+1. Catchy Title & Demo Link
+Սկզբում դիր նախագծի անունը և հղումը (եթե արդեն deploy ես արել, օրինակ՝ Vercel-ով կամ Netlify-ով)։
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Modern Portfolio — Frontend Excellence 
 
-## React Compiler
+A high-performance portfolio website built with a focus on clean architecture, performance optimization, and responsive design.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+Performance First: Lazy loading, bundle splitting, and optimized assets for near-perfect Lighthouse scores.
+
+Interactive UI: Modern Glassmorphism design with Dark/Light mode support.
+
+Clean Code: Modular component structure and custom CSS variables for easy maintenance.
+
+UX Focused: Clipboard integration for contacts and seamless navigation.
+
+
+
+4. Tech Stack
+
+Frontend: React 18, 
+
+Styling: CSS Modules, CSS Variables.
+
+Tools: React Icons, React Router Dom.
+
+
+
+Performance Optimization:
+
+Implemented React.lazy and Suspense for route-based code splitting.
+
+Utilized Native Lazy Loading for images to reduce initial load time.
+
+Zero external UI libraries (like Bootstrap) to keep the bundle size minimal.
+
+
+
+6. How to Run (Local Setup)
+
+Bash
+git clone https://github.com/arasargsyan1/portfolio.git
+
+npm install
+
+npm run dev
+
+gmail: sargsyanara567@gmail.com
