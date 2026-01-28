@@ -1,54 +1,80 @@
-import Container from '../../shared/ui/Container';
-import styles from './Home.module.css';
-import Button from '../../shared/UI/Button';
-import Section from '../../shared/UI/Section';
-import Card from '../../shared/UI/Card';
+import Container from "../../shared/ui/Container";
+import styles from "./Home.module.css";
+import Section from "../../shared/UI/Section";
+import { useSelector } from "react-redux";
+import heroImg from "/hero1.jpg";
+import Card from "../../shared/ui/Card";
 
 const Home = () => {
+  const skills = useSelector((state) => state.skills);
+  const experience = useSelector((state) => state.experience);
+
   return (
     <>
-      <Section variant="primary" background="gradient">
-        <Container size="tight">
+      <Section>
+        <Container className={styles.mainInfoContainer}>
           <div className={styles.hero}>
-            <div className={styles.heroBadge}>
-              <span className={styles.badge}>👋 Hwllo, I'm</span>
-            </div>
-            <h1 className={styles.heroTitle}>
-              <span className={styles.gradientText}>Frontend developer</span>
-            </h1>
+            <span className={styles.badge}>Hello, I'm Ara</span>
+            <h1 className={styles.sectionTitle}>Frontend developer</h1>
             <p className={styles.heroSubtitle}>
               I create modern, fast, and user-friendly web applications.
             </p>
-            <div className={styles.heroButtons}>
-              <Button size="large" variant="primary">
-                🚀 Watch projects 
-              </Button>
-              <Button size="large" variant="secondary">
-                📧 Get in touch
-              </Button>
-            </div>
+          </div>
+          <div className={styles.imgContainer}>
+            <img className={styles.homeImg} src={heroImg} alt="" />
           </div>
         </Container>
       </Section>
 
-      <Section>
-        <Container>
+      <Section variant="secondary">
+        <Container className={styles.mainAbout}>
+          <h2 className={styles.sectionTitle}>Experience</h2>
+          <div className={styles.aboutSection}>
+            {experience.map((experience) => (
+              <Card key={experience.name} className={styles.aboutCard}>
+                <h2 className={styles.minimalTitle}> {experience.name}</h2>
+
+                <div className={styles.minimalExperience}>
+                  {experience.experienceItems.map((item) => (
+                    <div key={item.name} className={styles.experienceBlock}>
+                      <div className={styles.experienceHeader}>
+                        <div className={styles.experienceIcon}>
+                          <img src={experience.icone} loading="lazy" alt="University" />
+                        </div>
+                        <div>
+                          <h3>{item.name}</h3>
+                          <p className={styles.experiencePeriod}>{item.date}</p>
+                        </div>
+                      </div>
+                      <p className={styles.experienceDescription}>
+                        {item.description}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </Card>
+            ))}
+          </div>
+        </Container>
+      </Section>
+
+      <Section background="secondary">
+        <Container className={styles.skillsContainer}>
+          <h2 className={styles.sectionTitle}>Skills</h2>
           <div className={styles.skillsGrid}>
-            <Card hover className={styles.skillCard}>
-              <div className={styles.skillIcon}>⚡</div>
-              <h3>Կատարողականություն</h3>
-              <p>Optimized and fast loading applications</p>
-            </Card>
-            <Card hover className={styles.skillCard}>
-              <div className={styles.skillIcon}>🎨</div>
-              <h3>Դիզայն</h3>
-              <p>Modern UI/UX with attention to details</p>
-            </Card>
-            <Card hover className={styles.skillCard}>
-              <div className={styles.skillIcon}>🔧</div>
-              <h3>Թեխնոլոգիաներ</h3>
-              <p>React, TypeScript, Next.js, Tailwind</p>
-            </Card>
+            {skills.map((skill) => (
+              <Card key={skill.name} hover className={styles.skillCard}>
+                <h3>{skill.name}</h3>
+
+                <div className={styles.skillGroup}>
+                  {skill.skillsGroupe.map((skillType) => (
+                    <span key={skillType} className={styles.skill}>
+                      {skillType}
+                    </span>
+                  ))}
+                </div>
+              </Card>
+            ))}
           </div>
         </Container>
       </Section>

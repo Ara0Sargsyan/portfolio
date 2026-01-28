@@ -1,0 +1,129 @@
+.container {
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.header {
+  margin-bottom: 80px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.subtittle {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-text-secondary); 
+  letter-spacing: 3px;
+  position: relative;
+  opacity: 0.8;
+}
+
+
+.subtittle:not(:last-child)::after {
+  content: "•";
+  margin-left: 30px;
+  color: var(--color-primary-200);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 60px;
+  align-items: start;
+}
+
+
+.imgContainer {
+  position: sticky;
+  top: 120px;
+  display: flex;
+  justify-content: center;
+}
+
+.img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: var(--radius-xl);
+  border: 2px solid var(--glass-border);
+  background: var(--glass-bg);
+  padding: 12px; 
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: blur(10px);
+  transition: transform var(--transition-base);
+}
+
+.img:hover {
+  transform: scale(1.03) rotate(1deg);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.sectionTitle {
+  font-size: 1.6rem;
+  color: var(--color-primary-200); 
+  margin-bottom: 15px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--color-text-primary);
+  opacity: 0.9;
+}
+
+.section strong {
+  color: var(--color-primary-300);
+  font-weight: 700;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .imgContainer {
+    position: static;
+  }
+
+  .img {
+    max-width: 320px;
+  }
+
+  .subtittle:not(:last-child)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 40px 15px;
+  }
+
+  .title {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .section {
+    padding: 20px;
+  }
+}

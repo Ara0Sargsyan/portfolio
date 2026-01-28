@@ -48,7 +48,7 @@
 
 .secondary:hover {
   border-color: var(--color-primary-400);
-  background-color: var(--color-primary-400);
+  background-color: var(--color-primary-100);
 }
 
 .ghost {

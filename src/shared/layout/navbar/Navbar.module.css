@@ -85,7 +85,7 @@
 }
 
 .active {
-  color: var(--color-accent-main);
+  color: gray;
 }
 
 .active::after {

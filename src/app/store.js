@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
-import projectsReducer from '../features/projects/projectsSlice'
 import themeReducer from '../features/theme/themeSlice';
+import skillsReducer from '../features/home/skillsSlice';
+import experienceReducer from '../features/home/experienceSlice';
 
 export const store = configureStore({
   reducer: {
-    projects: projectsReducer,
-    theme: themeReducer
+    theme: themeReducer,
+    skills: skillsReducer,
+    experience: experienceReducer,
   },
 })
