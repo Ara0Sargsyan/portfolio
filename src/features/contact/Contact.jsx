@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import Container from "../../shared/ui/Container";
 import styles from './Contact.module.css';
 import { FaGithub, FaLinkedinIn, FaPhoneAlt, FaRegEnvelope, FaCheck } from "react-icons/fa";
 import Card from '../../shared/ui/Card';
+import Container from '../../shared/ui/Container';
 
 const contactData = [
   {
