@@ -1,6 +1,6 @@
 import Container from "../../shared/ui/Container";
 import styles from "./Home.module.css";
-import Section from "../../shared/UI/Section";
+import Section from "../../shared/ui/Section";
 import { useSelector } from "react-redux";
 import heroImg from "/hero1.jpg";
 import Card from "../../shared/ui/Card";

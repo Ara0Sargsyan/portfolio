@@ -1,7 +1,7 @@
 import Container from "../../shared/ui/Container";
 import styles from "./about.module.css";
 import heroimg from "../../../public/hero.JPG";
-import Section from "../../shared/UI/Section";
+import Section from "../../shared/ui/Section";
 
 const About = () => {
   return (
