@@ -7,9 +7,9 @@ const Header = () => {
     <header className={styles.header}>
       <Container>
         <div className={styles.headerContent}>
-          <div className={styles.logo}>
-            <h1 className={styles.logoText}>A/S</h1>
-          </div>
+          <a className={styles.logo} href="/">
+            {"</AS>"}
+          </a>
           <Navbar />
         </div>
       </Container>
