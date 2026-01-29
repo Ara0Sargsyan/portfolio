@@ -1,8 +1,8 @@
 
 <img width="1894" height="960" alt="image" src="https://github.com/user-attachments/assets/21927e33-52d1-497e-a965-c2fbe372da86" />
 
-1. Catchy Title & Demo Link
-Սկզբում դիր նախագծի անունը և հղումը (եթե արդեն deploy ես արել, օրինակ՝ Vercel-ով կամ Netlify-ով)։
+1. my Portfolio
+https://ara-dev.netlify.app/
 
 Modern Portfolio — Frontend Excellence 
 
