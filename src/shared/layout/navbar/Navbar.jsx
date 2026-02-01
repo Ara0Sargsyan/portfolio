@@ -14,9 +14,12 @@ const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
+      {!isClosed && (
+        <div className={styles.overlay} onClick={() => setIsClosed(true)} />
+      )}
       <button
         className={`${styles.burgerMenu} ${!isClosed ? styles.openBurger : ""}`}
-        onClick={() => setIsClosed(prev => !prev)}
+        onClick={() => setIsClosed((prev) => !prev)}
       >
         <span className={styles.burgerLine}></span>
         <span className={styles.burgerLine}></span>

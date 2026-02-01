@@ -7,10 +7,10 @@ import Container from '../../shared/ui/Container';
 const contactData = [
   {
     id: 1,
-    type: 'copy',
+    type: 'email', // Փոխվեց email-ի
     label: "Email",
     value: "sargsyanara567@gmail.com",
-    link: "",
+    link: "mailto:sargsyanara567@gmail.com", // mailto: հղումը
     icon: <FaRegEnvelope className={styles.icon} />,
   },
   {
@@ -31,10 +31,10 @@ const contactData = [
   },
   {
     id: 4,
-    type: 'copy',
+    type: 'tel', // Փոխվեց tel-ի
     label: "Phone",
     value: "+374 99 17 12 04",
-    link: "",
+    link: "tel:+37499171204", // tel: հղումը
     icon: <FaPhoneAlt className={styles.icon} />,
   },
 ];
@@ -43,7 +43,7 @@ const Contacts = () => {
   const [copiedId, setCopiedId] = useState(null);
 
   const handleAction = (item) => {
-    if (item.type === 'copy') {
+   if (item.type === 'email') {
       navigator.clipboard.writeText(item.value);
       setCopiedId(item.id);
       setTimeout(() => setCopiedId(null), 2000);
@@ -59,9 +59,10 @@ const Contacts = () => {
 
       <div className={styles.grid}>
         {contactData.map((item) => {
-          const isCopy = item.type === 'copy';
+          const isExternal = item.type === 'link';
+
           const Content = (
-            <Card hover={true} className={`${styles.contactCard} ${isCopy ? styles.copyCard : ''}`}>
+            <Card hover={true} className={`${styles.contactCard} ${!isExternal ? styles.copyCard : ''}`}>
               <div className={styles.iconBox}>
                 {copiedId === item.id ? <FaCheck className={styles.checkIcon} /> : item.icon}
               </div>
@@ -74,12 +75,23 @@ const Contacts = () => {
             </Card>
           );
 
-          return isCopy ? (
-            <div key={item.id} onClick={() => handleAction(item)} className={styles.actionWrapper}>
-              {Content}
-            </div>
-          ) : (
-            <a key={item.id} href={item.link} target="_blank" rel="noreferrer" className={styles.link}>
+          if (isExternal) {
+            return (
+              <a key={item.id} href={item.link} target="_blank" rel="noreferrer" className={styles.link}>
+                {Content}
+              </a>
+            );
+          }
+
+          // Եթե հեռախոս է կամ մեյլ (և՛ զանգում/բացում է, և՛ պատճենում)
+          return (
+            <a 
+              key={item.id} 
+              href={item.link} 
+              className={styles.link} 
+              onClick={() => handleAction(item)}
+              style={{ cursor: 'pointer' }}
+            >
               {Content}
             </a>
           );
