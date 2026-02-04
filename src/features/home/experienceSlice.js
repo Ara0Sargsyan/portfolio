@@ -34,6 +34,8 @@ const initialState = [
         description: `Contributed to multiple production projects using different tech stacks, focused on large datasets and high-load user interfaces.
                       Quickly learned and applied new technologies (Next.js, GraphQL, Apollo Client, reactive state management) in real-world scenarios.
                       Optimized rendering and data flow for complex, data-heavy screens, improving performance and usability.`,
+        projectLink: "",
+        projectLinkName: "",
       },
       {
         name: "BeeOnCode",
@@ -44,7 +46,9 @@ const initialState = [
                     control, allowing administrators to modify interface
                     elements and content. Worked closely with backend APIs to
                     ensure full functionality and smooth UI experience. Project
-                    website: Mtad.am`,
+                    website: `,
+        projectLink: "https://mtad.am/",
+        projectLinkName: "Mtad.am",
       },
     ],
   },
