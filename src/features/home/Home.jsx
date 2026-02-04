@@ -48,6 +48,7 @@ const Home = () => {
                       </div>
                       <p className={styles.experienceDescription}>
                         {item.description}
+                        {item.projectLink && <a className={styles.link} href={item.projectLink}>{item.projectLinkName}</a>}
                       </p>
                     </div>
                   ))}

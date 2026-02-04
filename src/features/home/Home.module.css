@@ -156,6 +156,16 @@
   border-left: 2px solid var(--color-border);
 }
 
+.link {
+  color: var(--color-text-secondary);
+  transition: color var(--transition-base);
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: var(--color-text-primary); 
+}
+
 .divider {
   height: 1px;
   background: linear-gradient(
