@@ -6,6 +6,7 @@ const initialState = [
     skillsGroupe: [
       "React JS",
       "Next JS",
+      "React Native",
       "HTML",
       "TypeScript",
       "JavaScript (ES6+)",
@@ -25,6 +26,7 @@ const initialState = [
       "Redux-Observable",
       "Zustand",
       "GraphQL",
+      "React Query",
       "Apollo Client",
     ],
   },
